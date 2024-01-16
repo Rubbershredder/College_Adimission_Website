@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVCE Admission Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="https://svcengg.edu.in/"><img src="./img/SVCE logo.jpg" alt="SVCE Logo"></a>
+            </div>
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="https://svcengg.edu.in/">Home</a></li>
+                        <li><a href="./index.html">Admission</a></li>
+                        <li><a href="https://svcengg.edu.in/">About</a></li>
+                        <li><a href="https://svcengg.edu.in/">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="sentence">
+            <h2><p>Welcome Fresher</p></h2>
+            <h3><p>This is SRI VENKATESWARA COLLEGE OF ENGINEERING Admission Portal</p></h2>
+                <h4><p>Fill In the details below to check your eligibility</p></h4>
+        </div>
+    </section>
+        <div class="container">
+            <div class="content">
+                <label for="percentage">Enter Percentage:</label>
+    <input type="number" id="percentage" placeholder="Enter percentage"><br>
+
+    <label for="cetRank">Enter CET Rank:</label>
+    <input type="number" id="cetRank" placeholder="Enter CET rank"><br>
+
+    <button onclick="checkAdmissionEligibility()">Check Eligibility</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAdmissionEligibility() {
+            var percentage = parseFloat(document.getElementById('percentage').value);
+            var cetRank = parseInt(document.getElementById('cetRank').value);
+            var resultMessage = document.getElementById('result');
+    
+            if (!isNaN(percentage) && !isNaN(cetRank)) {
+                if (percentage >= 75) {
+                     if (cetRank < 35000) {
+                        resultMessage.innerHTML = "Congratulations! You are eligible for admission to the CSE, CSE-AI, CSE-CY&DS Department.";
+                    }
+                    else if (cetRank >= 35000 && cetRank <= 40000) {
+                        resultMessage.innerHTML = "Congratulations! You are eligible for admission to the ISE Department.";
+                    }
+                    else if (cetRank >= 40000 && cetRank <= 60000) {
+                        resultMessage.innerHTML = "Congratulations! You are eligible for admission to the ECE Department.";
+                     } else {
+                        resultMessage.innerHTML = "Sorry, you are not eligible for admission.";
+                    }
+                } else {
+                    resultMessage.innerHTML = "Sorry, you are not eligible for admission.";
+                }
+            } else {
+                resultMessage.innerHTML = "Please enter valid percentage and CET rank.";
+            }
+        }
+    </script>
+    
+        
+</body>
+</html>
