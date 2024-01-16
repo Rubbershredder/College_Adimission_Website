@@ -293,3 +293,13 @@ h4,
 p {
   text-align: center;
 }
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
