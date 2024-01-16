@@ -340,3 +340,24 @@ h3,
 p {
   text-align: center;
 }
+@media (max-width: 768px) {
+  .sentence {
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content-image {
+    width: 100%;
+  }
+
+  .content-title {
+    font-size: 1.2em;
+  }
+}
