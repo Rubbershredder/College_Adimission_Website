@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVCE Admission Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        /* White background */
+        margin: 0;
+        padding: 0;
+      }
+
+      form {
+        margin: 20px auto;
+        width: 80%;
+        background-color: #ffffff;
+        /* White background */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: #000000;
+        /* Black text */
+      }
+
+      /* Additional styling for the student registration form */
+      table {
+        width: 100%;
+      }
+
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      tr:nth-child(even) {
+        background-color: #f5f5f5;
+        /* Light gray alternating rows */
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 4px 0;
+        display: inline-block;
+        border: 1px solid #d9d9d9;
+        /* Light gray border */
+        box-sizing: border-box;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: lightskyblue;
+        /* White background */
+        color: #000000;
+        /* Black text */
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: lightsteelblue;
+        /* Light gray on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="https://svcengg.edu.in/"
+            ><img src="./img/SVCE logo.jpg" alt="SVCE Logo"
+          /></a>
+        </div>
+        <div class="navbar">
+          <div class="close-nav"><button>×</button></div>
+          <nav>
+            <ul>
+              <li><a href="https://svcengg.edu.in/">Home</a></li>
+              <li>
+                <a href="https://svcengg.edu.in/admissions-2023/">Admission</a>
+              </li>
+              <li><a href="https://svcengg.edu.in/">About</a></li>
+              <li><a href="https://svcengg.edu.in/">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-bar">
+          <button><i></i></button>
+        </div>
+      </div>
+    </header>
+
+    <form>
+      <table
+        cellpadding="2"
+        width="100%"
+        bgcolor="#ffffff"
+        align="center"
+        cellspacing="2"
+        border="3"
+      >
+        <tr>
+          <td colspan="2">
+            <center>
+              <font size="4"><b>Student Registration Form</b></font>
+            </center>
+          </td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="text" name="textnames" id="textname" size="30" />
+          </td>
+        </tr>
+        <tr>
+          <td>Father Name</td>
+          <td>
+            <input type="text" name="fathername" id="fathername" size="30" />
+          </td>
+        </tr>
+        <tr>
+          <td>Postal Address</td>
+          <td><input type="text" name="paddress" id="paddress" size="30" /></td>
+        </tr>
+        <tr>
+          <td>Personal Address</td>
+          <td>
+            <input
+              type="text"
+              name="personaladdress"
+              id="personaladdress"
+              size="30"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Sex</td>
+          <td>
+            <input type="radio" name="sex" value="male" size="10" />Male
+            <input type="radio" name="sex" value="female" size="10" />Female
+          </td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td>
+            <select name="City">
+              <option value="-1" selected>Select..</option>
+              <option value="New Delhi">NEW DELHI</option>
+              <option value="Mumbai">MUMBAI</option>
+              <option value="Goa">GOA</option>
+              <option value="Patna">PATNA</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Course</td>
+          <td>
+            <select name="Course">
+              <option value="-1" selected>Select..</option>
+              <option value="B.Tech">B.TECH</option>
+              <option value="MCA">MCA</option>
+              <option value="MBA">MBA</option>
+              <option value="BCA">BCA</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>District</td>
+          <td>
+            <select name="District">
+              <option value="-1" selected>Select..</option>
+              <option value="New Delhi">NEW DELHI</option>
+              <option value="Mumbai">MUMBAI</option>
+              <option value="Bangalore">BANGALORE</option>
+              <option value="Chennai">CHENNAI</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>State</td>
+          <td>
+            <select name="State">
+              <option value="-1" selected>Select..</option>
+              <option value="Delhi">DELHI</option>
+              <option value="UP">UP</option>
+              <option value="Goa">GOA</option>
+              <option value="Karnataka">KARNATAKA</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>PinCode</td>
+          <td><input type="text" name="pincode" id="pincode" size="30" /></td>
+        </tr>
+        <tr>
+          <td>EmailId</td>
+          <td><input type="text" name="emailid" id="emailid" size="30" /></td>
+        </tr>
+        <tr>
+          <td>DOB</td>
+          <td><input type="text" name="dob" id="dob" size="30" /></td>
+        </tr>
+        <tr>
+          <td>MobileNo</td>
+          <td><input type="text" name="mobileno" id="mobileno" size="30" /></td>
+        </tr>
+        <tr>
+          <td><input type="reset" /></td>
+          <td colspan="2"><input type="submit" value="Submit Form" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
