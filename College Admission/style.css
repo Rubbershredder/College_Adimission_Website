@@ -150,6 +150,7 @@ header .logo img {
 
 /* Body Code */
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+
 body {
   background: #f9f9f9;
   font: 16px "Raleway", sans-serif;
@@ -245,6 +246,7 @@ h3,
 p {
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .sentence {
     text-align: center;
